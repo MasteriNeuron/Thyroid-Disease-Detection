@@ -67,10 +67,31 @@ Cassandra database used for this project.
 The final model is deployed on AWS using Flask framework.
 
 ## User Interface
-### Single User Input Prediction User Interface
+* UI Overview<br>
+The user interface for the Thyroid Disease Detection system will consist of three main pages designed to facilitate bulk prediction and display results efficiently.
+
+* Index Page <br>
+The Index page serves as the entry point for the application. It will provide users with options to upload data for bulk prediction or access other functionalities, including navigation to the result page.
+
+* Result Page<br>
+The Result page will display the outcomes of the bulk prediction process. There will be two primary actions available on this page:
+Download Result (Bulk): This button allows the user to download the full set of prediction results in CSV format.
+View Predicted Results: This button provides users with the option to view the predicted results directly on the page.
+Additionally, the predicted results will be displayed on this page, providing users with immediate insights into the predictions made by the system.
+
+
 
 ### Batch File Prediction User Interface
-#### Homepage: A very simple UI with single page. 
+#### Homepage:
+![Screenshot 2024-12-15 181722](https://github.com/user-attachments/assets/7540ab1f-f738-4e82-8633-c251af0561e6)
+![Screenshot 2024-12-15 181735](https://github.com/user-attachments/assets/9ddab04d-059b-4ce4-8874-aa42720df8f1)
+
+#### Prediction Page:
+![Screenshot 2024-12-15 181854](https://github.com/user-attachments/assets/0049f4b5-423f-4229-851e-dcba2b8f0454)
+
+#### Result Page
+![Screenshot 2024-12-15 182042](https://github.com/user-attachments/assets/ee18b509-605e-45b3-8961-cec6bdabd5a2)
+
 
 
 
