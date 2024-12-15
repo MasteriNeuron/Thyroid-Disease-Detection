@@ -11,8 +11,7 @@ After hyperparameter tuning XGBoost model has performed well with better accurac
 AWS: http://tddbulkprediction-env.eba-uqgwbduj.us-east-2.elasticbeanstalk.com/
 
 # Demo
-
-[https://user-images.githubusercontent.com/72372136/134773017-d9d26150-0e68-4c2d-8627-b3a64beeac9b.mp4](https://res.cloudinary.com/dqcvlj2il/video/upload/v1734270071/Screen_Recording_2024-12-15_190658_j6qxdo.mp4)
+[https://res.cloudinary.com/dqcvlj2il/video/upload/v1734270071/Screen_Recording_2024-12-15_190658_j6qxdo.mp4]
 
 
 
@@ -65,7 +64,7 @@ Link:https://archive.ics.uci.edu/ml/datasets/thyroid+disease
 Cassandra database used for this project.
 
 ## Model Deployment
-The final model is deployed on Heroku using Flask framework.
+The final model is deployed on AWS using Flask framework.
 
 ## User Interface
 ### Single User Input Prediction User Interface
