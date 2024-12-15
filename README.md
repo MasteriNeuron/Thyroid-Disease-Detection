@@ -11,7 +11,7 @@ After hyperparameter tuning XGBoost model has performed well with better accurac
 AWS: http://tddbulkprediction-env.eba-uqgwbduj.us-east-2.elasticbeanstalk.com/
 
 # Demo
-[https://res.cloudinary.com/dqcvlj2il/video/upload/v1734270071/Screen_Recording_2024-12-15_190658_j6qxdo.mp4]
+https://res.cloudinary.com/dqcvlj2il/video/upload/v1734270071/Screen_Recording_2024-12-15_190658_j6qxdo.mp4
 
 
 
