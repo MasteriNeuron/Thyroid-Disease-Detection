@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Results</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<nav class="bg-blue-600 text-white py-4 shadow-lg">
+    <div class="container mx-auto flex justify-between items-center">
+        <h1 class="text-xl font-bold">Ineruominds Pvt. Ltd.</h1>
+        <div class="space-x-4">
+            <a href="/" class="hover:underline">Home</a>
+            <a href="/predict" class="hover:underline">Predict</a>
+            <a href="/result" class="hover:underline">Show Results</a>
+        </div>
+    </div>
+</nav>
+
+<body class="bg-gray-100 text-gray-800">
+
+    <div class="container mx-auto py-12">
+        <h1 class="text-3xl font-bold mb-6 text-center">Prediction Results</h1>
+        <table class="table-auto w-full bg-white shadow-lg rounded">
+            <thead>
+                <tr class="bg-blue-600 text-white">
+                    {% for col in columns %}
+                    <th class="px-4 py-2">{{ col }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in data %}
+                <tr class="border-b">
+                    {% for col in columns %}
+                    <td class="px-4 py-2 text-center">{{ row[col] }}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thyroid Disease Prediction</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Function to show the popup after the form is submitted
+        function showPredictionPopup(event) {
+            event.preventDefault();  // Prevent the form from submitting normally
+
+            // Get the file input element
+            const fileInput = document.getElementById('csvfile');
+            
+            // Check if the selected file is a CSV file
+            const file = fileInput.files[0];
+            if (file && file.type === 'text/csv') {
+                // Show the popup message
+                alert("Prediction is done!!");
+
+                // Create a FormData object to send the file data
+                let formData = new FormData(event.target);
+                
+                // Send the form data using Fetch API (AJAX)
+                fetch('/predict', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => response.json()) // Assuming the server returns JSON
+                .then(data => {
+                    console.log('Success:', data);
+                    // Handle response, for example, display the result or redirect if needed
+                })
+                .catch((error) => {
+                    console.error('Error:', error);
+                });
+            } else {
+                // If the file is not a CSV, show an error message
+                alert("Please upload a valid CSV file for prediction.");
+            }
+        }
+    </script>
+</head>
+<nav class="bg-blue-600 text-white py-4 shadow-lg">
+    <div class="container mx-auto flex justify-between items-center">
+        <h1 class="text-xl font-bold">Ineruominds Pvt. Ltd.</h1>
+        <div class="space-x-4">
+            <a href="/" class="hover:underline">Home</a>
+            <a href="/predict" class="hover:underline">Predict</a>
+            <a href="/result" class="hover:underline">Show Results</a>
+        </div>
+    </div>
+</nav>
+
+<body class="bg-gray-100 text-gray-800">
+
+    <div class="container mx-auto py-12 text-center">
+        <h1 class="text-3xl font-bold mb-6">Upload Your File for Prediction</h1>
+        <form id="predictionForm" action="/predict" method="POST" enctype="multipart/form-data" class="bg-white p-6 rounded shadow-md inline-block" onsubmit="showPredictionPopup(event)">
+            <label for="csvfile" class="block mb-4 text-gray-700 font-semibold">Upload CSV File:</label>
+            <input type="file" name="csvfile" id="csvfile" class="border border-gray-300 p-2 rounded mb-4 w-full" accept=".csv" required>
+            <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Do Prediction</button>
+        </form>
+
+        <div class="mt-6">
+            <button onclick="location.href='/return_file/'" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Download Result</button>
+            <button onclick="location.href='/result'" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Show Result</button>
+        </div>
+    </div>
+
+</body>
+</html>
